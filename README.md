@@ -1,1 +1,1 @@
-# code-recipes
+# Coding Recipes
