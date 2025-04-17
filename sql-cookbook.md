@@ -1,43 +1,45 @@
 # SQL Cookbook
 
-Introduction
-> Welcome to the SQL Cookbook, a comprehensive guide to solving common SQL problems and challenges. This cookbook is designed to provide practical solutions and recipes for developers, data analysts, and database administrators who work with SQL databases on a daily basis.
+## Introduction
+> Welcome! ✨
 
-The primary purpose of this cookbook is to serve as a quick reference and problem-solving guide for SQL practitioners. It covers a wide range of topics, from basic SQL queries to advanced techniques such as window functions and performance optimization.
+This cookbook is designed to provide practical solutions and recipes for developers, data analysts, and database administrators who work with SQL databases daily.
 
-The structure of the cookbook is organized into various chapters, each focusing on a specific aspect of SQL development. Within each chapter, you'll find recipes that address specific tasks or challenges, along with explanations and examples to help you understand the concepts.
-
- 
-How to Use the Cookbook
+### How to Use the Cookbook?
 This cookbook is designed to be used as a reference guide whenever you encounter a SQL-related problem or need guidance on a particular task. You can either browse through the table of contents to find relevant topics or use the index to search for specific keywords or queries.
-Each recipe in the cookbook follows a consistent format:
-•	Problem Statement: A brief description of the problem or task at hand.
-•	Solution: The SQL query or technique used to solve the problem.
-•	Explanation: An explanation of how the solution works and why it's effective.
-•	Example: One or more examples demonstrating the solution in action.
+#### Each recipe in the cookbook follows a consistent format:
+- **Problem Statement:** A brief description of the problem or task at hand.
+- **Solution:** The SQL query or technique used to solve the problem.
+- **Explanation:** An explanation of how the solution works and why it's effective.
+- **Example:** One or more examples demonstrating the solution in action.
  
-Tips for Efficient SQL Querying
+### Tips for Efficient SQL Querying
 Before diving into the recipes, here are some general tips to help you write efficient SQL queries:
-Use indexes to improve query performance, especially for columns frequently used in WHERE clauses or JOIN conditions.
-Minimize the use of wildcard characters (%) in LIKE queries, as they can lead to inefficient full table scans.
-Avoid using SELECT * to retrieve all columns from a table. Instead, specify only the columns you need.
-Use parameterized queries or prepared statements to prevent SQL injection attacks and improve security.
-Regularly monitor and optimize your database schema, indexes, and query execution plans for better performance.
-By following these tips and leveraging the recipes in this cookbook, you'll be better equipped to tackle SQL challenges and become a more proficient SQL developer.
+- Use indexes to improve query performance, especially for columns frequently used in WHERE clauses or JOIN conditions.
+- Minimize the use of wildcard characters (%) in LIKE queries, as they can lead to inefficient full table scans.
+- Avoid using SELECT * to retrieve all columns from a table. Instead, specify only the columns you need.
+- Use parameterized queries or prepared statements to prevent SQL injection attacks and improve security.
+- Regularly monitor and optimize your database schema, indexes, and query execution plans for better performance.
  
-Retrieving Data
+## Retrieving Data
+### Retrieving Individual Columns
+**Problem:** You want to retrieve specific columns from a table rather than fetching all columns.
 
- 
-Retrieving Individual Columns
-Problem: You want to retrieve specific columns from a table rather than fetching all columns.
-Solution:
+**Solution:**
+```sql
 SELECT column1, column2, ...
 FROM table_name;
-Explanation: The SELECT statement is used to retrieve data from a database. By specifying the column names separated by commas after the SELECT keyword, you can selectively retrieve only the columns you need from the specified table.
-Example: Consider a table named employees with columns employee_id, first_name, last_name, email, and hire_date. To retrieve only the first_name and last_name columns from the employees table:
+```
+**Explanation:** The `SELECT` statement is used to retrieve data from a database. By specifying the column names separated by commas after the SELECT keyword, you can selectively retrieve only the columns you need from the specified table.
+
+**Example:** Consider a table named employees with columns employee_id, first_name, last_name, email, and hire_date. To retrieve only the first_name and last_name columns from the employees table:
+
+```sql
 SELECT first_name, last_name
 FROM employees;
-Output:
+```
+
+**Output:**
 | first_name | last_name |
 |------------|-----------|
 | John       | Doe       |
