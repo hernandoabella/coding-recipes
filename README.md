@@ -1,4 +1,4 @@
-# Coding Cookbook />
+# Cookbook Collection
 Learn to cook delicious code recipes..
 
 ### Select your favorite ingredients
